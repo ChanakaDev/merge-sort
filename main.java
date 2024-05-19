@@ -27,14 +27,17 @@ class MergeSort {
         SalesData[] leftSubArray = new SalesData[leftSize];
         SalesData[] rightSubArray = new SalesData[rightSize];
 
-        //
+        // Adding values to the left sub array from salesData
         for (int i = 0; i < leftSize; ++i)
             leftSubArray[i] = salesData[lowerBound + i];
+
+        // Adding values to the right sub array from salesData
         for (int j = 0; j < rightSize; ++j)
             rightSubArray[j] = salesData[mid + 1 + j];
 
         int i = 0, j = 0, k = lowerBound;
 
+        // Compareing and adding min values
         while (i < leftSize && j < rightSize) {
             if (leftSubArray[i].totalSales <= rightSubArray[j].totalSales) {
                 salesData[k] = leftSubArray[i];
