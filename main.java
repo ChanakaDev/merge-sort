@@ -1,3 +1,5 @@
+// 1st part
+// class to keep the sales records
 class SalesData {
     int dayOfYear;
     double totalSales;
@@ -35,10 +37,11 @@ class MergeSort {
         for (int j = 0; j < rightSize; ++j)
             rightSubArray[j] = salesData[mid + 1 + j];
 
-        int i = 0, j = 0, k = lowerBound;
-
+        // merge logic
         // Compareing and adding min values
+        int i = 0, j = 0, k = lowerBound;
         while (i < leftSize && j < rightSize) {
+            // We have sorted our sales data using the total sales parameter
             if (leftSubArray[i].totalSales <= rightSubArray[j].totalSales) {
                 salesData[k] = leftSubArray[i];
                 i++;
@@ -65,17 +68,19 @@ class MergeSort {
     }
 
     public void sort(SalesData[] array, int lowerBound, int upperBound) {
-        // Start explanation
         if (lowerBound < upperBound) {
             int mid = (lowerBound + upperBound) / 2;
+            // 2nd part
             sort(array, lowerBound, mid);
             sort(array, mid + 1, upperBound);
+            // 3rd part
             merge(array, lowerBound, mid, upperBound);
         } else {
             return;
         }
     }
 
+    // 4th part
     public static void main(String[] args) {
         SalesData[] sales = {
                 new SalesData(1, 200.00, 50),
