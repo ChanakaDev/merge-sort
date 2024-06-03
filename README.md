@@ -1,4 +1,4 @@
-# Sales Data Management and Sorting Using Merge Sort
+# Sales Data Sorting Using Merge Sort
 
 ## Overview
 This project implements a simple system to manage and sort sales records. The main components include a `SalesData` class to store individual sales records and a `MergeSort` class to sort these records based on the total sales amount using the Merge Sort algorithm.
